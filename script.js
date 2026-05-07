@@ -8,16 +8,6 @@ function toggleMenu () {
 
 }
 
-// Get navbar links, menu, and button
-
-// const navLinks = document.getElementById("navLinks");
-// const menuBtn = document.querySelector(".menu-btn");
-// const navItems = document.querySelectorAll(".nav-links a");
-// const sections = document.querySelectorAll("section");
-
-//const revealElements = document.querySelectorAll(".reveal");
-
-
 // Close mobile menu when clicking any menu link or inside area of menu box
 
 const navItems = document.querySelectorAll(".nav-links a");
@@ -31,7 +21,6 @@ navItems.forEach(function (item) {
 
 // Close mobile menu when clicking outside of the website
 
-// const navLinks = document.getElementById("navLinks");
 const menuBtn = document.querySelector(".menu-btn");
 
 document.addEventListener("click", function (event) {
@@ -87,57 +76,3 @@ function revealOnScroll () {
 
 window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
-
-
-
-
-
-
-
-// ***********************
-// ***********************
-// this code is clean without used any more attributes comments... 
-
-
-// function toggleMenu() {
-//   const navLinks = document.getElementById("navLinks");
-//   navLinks.classList.toggle("active");
-// }
-
-// const navLinks = document.getElementById("navLinks");
-// const menuBtn = document.querySelector(".menu-btn");
-// const navItems = document.querySelectorAll(".nav-links a");
-// const sections = document.querySelectorAll("section");
-
-// navItems.forEach(function (item) {
-//   item.addEventListener("click", function () {
-//     navLinks.classList.remove("active");
-//   });
-// });
-
-// document.addEventListener("click", function (event) {
-//   if (!navLinks.contains(event.target) && !menuBtn.contains(event.target)) {
-//     navLinks.classList.remove("active");
-//   }
-// });
-
-// window.addEventListener("scroll", function () {
-//   let currentSection = "";
-
-//   sections.forEach(function (section) {
-//     const sectionTop = section.offsetTop - 130;
-//     const sectionHeight = section.offsetHeight;
-
-//     if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-//       currentSection = section.getAttribute("id");
-//     }
-//   });
-
-//   navItems.forEach(function (item) {
-//     item.classList.remove("active");
-
-//     if (item.getAttribute("href") === "#" + currentSection) {
-//       item.classList.add("active");
-//     }
-//   });
-// });
