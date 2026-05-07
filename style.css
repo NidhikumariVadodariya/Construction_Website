@@ -1,0 +1,366 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {  /* make scrolling easy for whole page */
+    scroll-behavior: smooth;
+}
+
+body {  /* change the font and background color of the body */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f8fafc;
+    color: #111827;
+}
+
+a {   /* link of the text decoration */
+    text-decoration: none;
+}
+
+header {  /* header stayed sticky to the top even while scrolling and styled to blue */
+    background: #0f172a;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar {   /* align navigation and styled it accordigly like spacing */
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {   /* styled BuildRight Construction logo which is at top right corner */
+    color: white;
+    font-size: 22px;
+}
+
+.nav-links { /* make spacing between menu items like Home, Services, Projects, About, Contact */
+    list-style: none;
+    display: flex;
+    gap: 24px;
+}
+
+.nav-links a {  /* menu items styled and smooth transitioned */
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav-links a:hover,    /* when you hover cursor on the menu items, it becomes the yellow as per color setting */
+.nav-links a.active {
+    color: #facc15;
+    border-bottom: 2px solid #facc15;
+    padding-bottom: 6px;
+}
+
+.menu-btn {   /* toggleMenu or button is styled */
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.hero {   /* styled to the Construction • Renovation • Project Support section and/or area and/or paragraph */
+    min-height: 90vh;
+    padding: 80px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    scroll-margin-top: 90px;
+
+    /* background: linear-gradient(135deg, #0f172a, #1e293b); */
+    background: linear-gradient(rgba(15, 23, 42, 0.82), rgba(15, 23, 42, 0.82)),
+    url("images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.hero-content {  /* make bigger intro font styled */
+    max-width: 850px;
+}
+
+.badge {    /* styled to the Construction • Renovation • Project Support text*/
+    display: inline-block;
+    background: rgba(250, 204, 21, 0.15);
+    color: #facc15;
+    padding: 8px 14px;
+    border-radius: 999px;
+    margin-bottom: 18px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.hero h1 {  /* styled to the "Reliable Construction Services for Residential & Commercial Projects" text */
+    font-size: 48px;
+    margin-bottom: 18px;
+    line-height: 1.2;
+}
+
+.hero p {   /* styled to the after text (Reliable Construction Services for Residential & Commercial Projects) of the paragraph */
+    font-size: 18px;
+    margin-bottom: 28px;
+}
+
+.btn {    /* styled to the button of "View Projects and Request Quote and Send Email(from contact section)" */
+    display: inline-block;
+    background: #facc15;
+    color: #0f172a;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin: 8px;
+    transition: 0.3s ease;
+}
+
+.btn:hover {  /* when you hover the cursor on "View Projects and Request Quote and Send Email(from contact section)", it will change its color as set and transform to top by -3px */
+    background: #eab308;
+    transform: translateY(-3px);
+}
+
+.btn.secondary {  /* styled Request Quote button to do highlight */
+    background: transparent;
+    color: white;
+    border: 2px solid #facc15;
+}
+
+.section {  /* make all the sections divided according to the speces and areas set */
+    max-width: 1200px;
+    margin: auto;
+    padding: 75px 8%;
+    scroll-margin-top: 90px;
+}
+
+.section-title {   /* make all the section title to the center and styled them by the page space lioke from top or bottom */
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 35px;
+    color: #0f172a;
+}
+
+.reveal {   /* This will make sections fade in + slide up when they enter the screen. */
+
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.grid {   /* grid the data of all the services and projects into the coloumns wise with perfect space and size */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+}
+
+.card {  /* styled to the cards or information of Services and Projects */
+    background: white;
+    padding: 28px;
+    border-radius: 14px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    transition: 0.3s ease;
+}
+
+.project-card {
+    padding: 0;
+    overflow: hidden;
+}
+
+.project-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 24px;
+}
+
+.card:hover {   /* when you hover the cursor over the cards of the services and projects, it will be transform to the top side */
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.09);
+}
+
+.card h3 { /* styled to the card's main h3 fonts */
+    color: #0f172a;
+    margin-bottom: 12px;
+}
+
+.card p {  /* styled to the card's paragraph fonts */
+    color: #374151;
+}
+
+.about p {  /* styled to the paragraph of "About BuildRight" */
+    background: white;
+    padding: 30px;
+    border-radius: 14px;
+    max-width: 850px;
+    margin: auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.project-note {   /* this is extra note about the website that it is for learning purpose */
+    margin-top: 18px;
+    font-size: 14px;
+    color: #6b7280;
+    text-align: center;
+}
+.contact-box {    /* contact box text styled */
+    background: white;
+    padding: 35px;
+    border-radius: 14px;
+    text-align: center;
+    max-width: 700px;
+    margin: auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.contact-box p { /* contact box paragraph text styled */
+    margin-bottom: 12px;
+} 
+
+.contact-box .btn {  /* contact box button styled */
+    margin-top: 15px;
+}
+
+.contact-info {  /* contact info for email, phone, location have been set by adding space below them */
+    margin-bottom: 25px;
+}
+
+.contact-form {  /* contact form styled in column wise like name, email. message, and button */
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {   /* input box and textarea have been set to boxed width wise and inside font */ 
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {   /* This applies styling when user clicks inside an input. */
+    border-color: #facc15;     /* Changes border to yellow when active.*/
+    box-shadow: 0 0 0 3px rgba(250, 204, 21, 0.2);   /* Adds a soft yellow glow around the active input. */
+}
+
+.contact-form textarea { /* Lets user resize the message box only up/down. not sideways. */
+    resize: vertical;
+}
+
+.contact-form button {   /* Removes default button border. */
+    border: none;
+    cursor: pointer;   /* shows hand icon when hovering over button. */
+}
+
+footer {  /* footer has been set with centered text and blue background */
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 24px;
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {  /* this shows how website will show in different phone screens specially menu items (with buttons and links) */
+    
+    .navbar {
+        position: relative;
+    }
+
+    .menu-btn {   /* this specially gives effects or styles to the toggleMenu button (while open in phone screen) */
+        display: block;
+        position: absolute;
+        right: 2%;
+        top: 14px;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 62px;
+        right: 2%;
+        width: 230px;
+        background: #0f172a;
+        flex-direction: column;
+        padding: 20px;
+        border-radius: 10px;
+        display: flex;
+        opacity: 0;
+        transform: translateY(-15px);
+        pointer-events: none;
+        transition: 0.3s ease;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .nav-links.active {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    
+    .hero .btn {
+        display: block;
+        margin: 12px auto;
+    }
+
+    .hero {
+        padding: 70px 6%;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .section {
+        padding: 55px 6%;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+}

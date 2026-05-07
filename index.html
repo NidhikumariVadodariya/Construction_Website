@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>BuildRight Construction</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <h2 class="logo">BuildRight Construction</h2>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            
+            <p class="badge">Construction • Renovation • Project Support</p>
+            
+            <h1>Reliable Construction Services for Residential & Commercial Projects</h1>
+            <p>
+                We provide professional construction, renovation, and project support services
+                with a focus on quality, safety, and client satisfaction.
+            </p>
+            
+            <a href="#projects" class="btn">View Projects</a>
+            <a href="#contact" class="btn secondary">Request Quote</a>
+        
+        </div>
+    </section>
+
+    <!-- Add reveal to the sections for animating. -->
+    <section id="services" class="section reveal">
+        <h2 class="section-title">Our Services</h2>
+
+            <div class="grid">
+
+                <div class="card">                  
+                    <h3>Residential Construction</h3>
+                    <p>Custom home improvements, additions, and residential building services.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Commercial Projects</h3>
+                    <p>Professional construction support for offices, retail spaces, and business properties.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Renovation & Remodeling</h3>
+                    <p>Interior and exterior renovations designed to improve function, safety, and appearance.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Project Planning Support</h3>
+                    <p>Organized project planning, scheduling support, and progress coordination.</p>
+                </div>
+
+            </div>
+    </section>
+
+    <!-- Add reveal to the sections for animating. -->
+    <section id="projects" class="section reveal">
+        <h2 class="section-title">Featured Projects</h2>
+
+            <div class="grid">
+            
+                <div class="card project-card">
+                    <img src="images/project-1.jpg" alt="Modern home renovation project">
+                    
+                    <div class="card-content">
+                        <h3>Modern Home Renovation</h3>
+                        <p>A clean residential renovation concept focused on layout, finish, and usability.</p>
+                    </div>
+                </div>
+
+                <div class="card project-card">
+                    <img src="images/project-2.jpg" alt="Commercial office build project">
+                    
+                    <div class="card-content">
+                        <h3>Commercial Office Build</h3>
+                        <p>A commercial project concept showing organized planning and modern design.</p>
+                    </div>                
+                </div>
+
+                <div class="card project-card">
+                    <img src="images/project-3.jpg" alt="Exterior improvement project">
+
+                    <div class="card-content">
+                        <h3>Exterior Improvement Project</h3>
+                        <p>An exterior upgrade concept focused on curb appeal and functional improvements.</p>
+                    </div>                
+                </div>
+
+            </div>
+    </section>
+
+    <!-- Add reveal to the sections for animating. -->
+    <section id="about" class="section about reveal">
+        <h2 class="section-title">About BuildRight</h2>
+        <p>
+            BuildRight Construction is a fictional construction company website created
+            as a portfolio project to demonstrate responsive design, clean layout,
+            service-based content structure, and professional web presentation.
+        </p>
+
+        <p class="project-note">
+            Note: This is a fictional company website developed for portfolio and learning purposes.
+        </p>
+
+    </section>
+
+    <!-- Add reveal to the sections for animating. -->
+    <section id="contact" class="section contact reveal">
+        <h2 class="section-title">Contact Us</h2>
+
+        <div class="contact-box">
+
+            <div class="contact-info">
+                <p><strong>Email:</strong> info@buildrightconstruction.com</p>
+                <p><strong>Phone:</strong> +1 000-000-0000</p>
+                <p><strong>Location:</strong> Ontario, Canada</p>
+            </div>            
+            <!-- <a href="mailto:info@buildrightconstruction.com" class="btn">Send Email</a> -->
+            
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+
+                <button type="submit" class="btn">Send Message</button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2026 BuildRight Construction. Portfolio project by Nidhi Vadodariya.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
