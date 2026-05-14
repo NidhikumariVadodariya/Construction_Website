@@ -1,4 +1,4 @@
-// Javascript
+// JAVASCRIPT
 
 // Open / close mobile menu
 
