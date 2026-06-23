@@ -44,6 +44,15 @@ header {  /* header stayed sticky to the top even while scrolling and styled to 
     font-size: 22px;
 }
 
+.logo a {
+    color: white;
+    text-decoration: none;
+}
+
+.logo a:hover {
+    color: #facc15;
+}
+
 .nav-links { /* make spacing between menu items like Home, Services, Projects, About, Contact */
     list-style: none;
     display: flex;
